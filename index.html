@@ -27,7 +27,7 @@ a.button-collapse.top-nav {
 </style>
 </head>
 
-<body ng-app="myapp">
+<body ng-app="myapp" id="top">
 
 <div class="container center-align sr-header-pane" ng-controller="NavController">
   <div class="sr-header">
@@ -41,18 +41,18 @@ a.button-collapse.top-nav {
       </ul>
     </div>
 
-    <div class="sr-header-menu">
+    <div class="sr-header-menu row" pushpin pushpin-top="100" pushpin-offset="0" pushpin-bottom="Infinity">
       <ul>
-        <a class="transparent navy-text btn-large" ng-click="gotoAnchor('who_we_are')" ng-cloak>
+        <a class="transparent navy-text btn-large btn-flat" scroll-to="who_we_are" ng-cloak>
           who we are
         </a>
-        <a class="transparent navy-text btn-large" ng-click="gotoAnchor('our_team')" ng-cloak>
+        <a class="transparent navy-text btn-large btn-flat" scroll-to="our_team" ng-cloak>
           our team
         </a>
-        <a class="transparent navy-text btn-large" ng-click="gotoAnchor('projects')" ng-cloak>
+        <a class="transparent navy-text btn-large btn-flat" scroll-to="projects" ng-cloak>
           projects
         </a>
-        <a class="transparent navy-text btn-large" ng-click="gotoAnchor('contact_us')" ng-cloak>
+        <a class="transparent navy-text btn-large btn-flat" scroll-to="contact_us" ng-cloak>
           contact us
         </a>
       </ul>
@@ -68,6 +68,12 @@ a.button-collapse.top-nav {
 </div>
 
 
+<div class="row">
+  <div class="back-to-top">
+    <a class="btn-flat navy white-text btn-large" scroll-to="top">Back to Top
+    </a>
+  </div>
+</div>
 <footer class="page-footer navy">
   <div class="">
     <div class="row">
@@ -104,14 +110,11 @@ a.button-collapse.top-nav {
     'ui.materialize',
     'ngCookies',
     'http-auth-interceptor',
-    'ngPhotoSwipe'
+    'ngPhotoSwipe',
+    'smoothScroll'
   ])
 </script>
-<script>
-//$(document).ready(function(){
-//    $('.slider').slider();
-//    });
-</script>
+
 <script src="silver_rail_build_3/dist/app.js"></script>
 <script src="silver_rail_build_3/dist/templates.js"></script>
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.0/js/materialize.min.js"></script>-->

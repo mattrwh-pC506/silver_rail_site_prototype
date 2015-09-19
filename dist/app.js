@@ -8,22 +8,22 @@ app.controller('HomeController',
   	  $scope.images = [];
 	
 	$scope.getImages = function () {
-		var sizes = [
-			{w: 350, h: 200},
-			{w: 350, h: 200},
-			{w: 350, h: 200},
-			{w: 350, h: 200},
-			{w: 350, h: 200},
-			{w: 350, h: 200}
+		var image_list = [
+			'http://www.sarasotaconstructionfla.com/remodeling2.jpg',
+			'http://www.probuiltconstruction.com/images/Custom-Decks-thumbnail.jpg',
+			'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQI3XLO7VvOlLYuft-quuWTHHrb7UPyCl74F1ttpdnxh4wJgIRAqw',
+			'http://www.negocioinversiones.com/wp-content/uploads/2015/01/home-remodeling-ideas.jpg',
+			'http://freshcornbuildingcompany.com/assets/Fotolia-44024139-X-c-r.jpg',
+			'http://www.designbuildremodelinggroup.com/wp-content/fancygallery/Kitchens/Kitchens/1318527193_Washington-22.jpg'
 		];
 		
-		for (var i = 1; i <= 6; i++) {
+		for (var i = 0; i <= 5; i++) {
 			$scope.images.push({ 
-				src: 'http://lorempixel.com/' + sizes[i - 1].w + '/' + sizes[i - 1].h + '/cats',
-				safeSrc: 'http://lorempixel.com/' + sizes[i - 1].w + '/' + sizes[i - 1].h + '/cats',
-				thumb: 'http://lorempixel.com/' + sizes[i - 1].w + '/' + sizes[i - 1].h + '/cats',
-				caption: 'Lorem Ipsum Dolor',
-				size: screenSize(sizes[i - 1].w, sizes[i - 1].h),
+				src: image_list[i],
+				safeSrc: image_list[i],
+				thumb: image_list[i],
+				caption: 'Loading...',
+				size: screenSize(800, 500),
 				type: 'image'
 			});
 		}
@@ -443,7 +443,7 @@ ngPhotoSwipe.directive('photoGallery', [ function () {
 				'<div class="card" ng-switch-default><div class="card-image">' +
 					'<a href="{{img.src}}" itemprop="contentUrl" data-size="{{img.size}}">' +
 						'<img class="responsive-img" ng-src="{{img.thumb}}" itemprop="thumbnail" alt="{{img.caption}}" />' +
-						'<span class="navy card-title">Project Title</span>' +
+						'<!--<span class="navy card-title">Project Title</span>-->' +
 					'</a>' +
 				'</div>' +
 				'<div class="card-content">' +
