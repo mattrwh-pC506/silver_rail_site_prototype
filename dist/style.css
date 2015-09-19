@@ -10172,6 +10172,11 @@ footer {
   height: 350px !important;
   overflow: hidden; }
 
-.back-to-top {
-  margin-left: auto;
-  margin-right: auto; }
+.back-to-top.pinned {
+  right: 10px !important;
+  bottom: 10px !important;
+  left: auto !important;
+  top: auto !important; }
+
+.back-to-top.pin-top {
+  visibility: hidden; }
