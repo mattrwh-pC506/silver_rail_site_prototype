@@ -447,7 +447,7 @@ ngPhotoSwipe.directive('photoGallery', [ function () {
 					'</a>' +
 				'</div>' +
 				'<div class="card-content">' +
-	              '<p>Project Details' +
+	              '<p class="flow-text">A short and sweet description of the project</p>' +
 	            '</div>' +
 	            '</div>' +				
 			'</div>' +
